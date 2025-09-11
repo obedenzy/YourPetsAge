@@ -247,6 +247,67 @@ export default function PetDetails() {
           </motion.p>
         </div>
 
+        {/* Pet Information Display */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-8"
+        >
+          <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20" data-testid="pet-info-card">
+            <CardHeader>
+              <CardTitle className="flex items-center text-xl">
+                <span className="text-2xl mr-3">{PET_KINDS.find(k => k.id === petData.kind)?.emoji || "🐾"}</span>
+                Pet Information
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="font-semibold text-muted-foreground text-sm mb-1">Name</div>
+                  <div className="text-lg font-bold" data-testid="pet-info-name">{petData.name}</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-muted-foreground text-sm mb-1">Type</div>
+                  <div className="text-lg font-bold capitalize" data-testid="pet-info-type">
+                    {PET_KINDS.find(k => k.id === petData.kind)?.name || petData.kind}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-muted-foreground text-sm mb-1">Breed</div>
+                  <div className="text-lg font-bold" data-testid="pet-info-breed">{petData.breed}</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-muted-foreground text-sm mb-1">Size</div>
+                  <div className="text-lg font-bold capitalize" data-testid="pet-info-size">{petData.sizeCategory}</div>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-border">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="font-semibold text-muted-foreground text-sm mb-1">Date of Birth</div>
+                    <div className="text-lg font-bold" data-testid="pet-info-birthdate">
+                      {new Date(petData.birthDate).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                  </div>
+                  {ageResult && (
+                    <div className="text-center">
+                      <div className="font-semibold text-muted-foreground text-sm mb-1">Current Age</div>
+                      <div className="text-lg font-bold text-primary" data-testid="pet-info-current-age">
+                        {formatAge(ageResult.ageInYears, ageResult.ageInMonths)}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* Results Sections - Only show when ageResult exists */}
         {ageResult && realTimeAge && (
           <div ref={resultsRef} className="space-y-8">
