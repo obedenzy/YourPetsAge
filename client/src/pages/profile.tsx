@@ -136,7 +136,7 @@ export default function Profile() {
                   </div>
                   
                   <div className="flex space-x-2">
-                    <Link href={`/calculator?pet=${pet.id}`} className="flex-1">
+                    <Link href={`/pet-details/${pet.id}`} className="flex-1">
                       <Button className="w-full" size="sm" data-testid={`button-view-${pet.id}`}>
                         View Details
                       </Button>

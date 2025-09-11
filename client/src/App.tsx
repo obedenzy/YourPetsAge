@@ -8,6 +8,7 @@ import Footer from "@/components/layout/footer";
 import Home from "@/pages/home";
 import Calculator from "@/pages/calculator";
 import Profile from "@/pages/profile";
+import PetDetails from "@/pages/pet-details";
 import Community from "@/pages/community";
 import Meetups from "@/pages/meetups";
 import Forums from "@/pages/forums";
@@ -26,6 +27,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/calculator" component={Calculator} />
           <Route path="/profile" component={Profile} />
+          <Route path="/pet-details/:id" component={PetDetails} />
           <Route path="/community" component={Community} />
           <Route path="/meetups" component={Meetups} />
           <Route path="/forums" component={Forums} />
