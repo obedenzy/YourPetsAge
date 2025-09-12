@@ -42,28 +42,62 @@ const MOCK_PET_DATA = {
   }
 };
 
-// Famous pets data
+// Real famous pets data from historical records
 const FAMOUS_PETS = {
-  0: [{ name: "Newborn puppies/kittens", description: "Just like newborn pet babies taking their first breaths" }],
-  1: [{ name: "Grumpy Cat", description: "Famous internet sensation cat (lived 7 years)" }],
-  2: [{ name: "Boo the Pomeranian", description: "World's cutest dog social media star" }],
-  3: [{ name: "Maru the Cat", description: "Famous Japanese box-loving cat" }],
-  5: [{ name: "Lassie", description: "Famous Rough Collie from TV and movies" }],
-  8: [{ name: "Beethoven", description: "Famous St. Bernard from the movies" }],
-  10: [{ name: "Marley", description: "From 'Marley & Me' - lived 13 years" }],
-  15: [{ name: "Oldest recorded dogs", description: "Like Bluey the Australian Cattle Dog" }]
+  1: [{ name: "All Ball", description: "Beloved by Koko the Gorilla, born in USA (1984)", birthPlace: "USA", nationality: "American" }],
+  4: [{ name: "Old Drum", description: "Hound from Missouri whose death led to 'man's best friend' legal ruling (1865-1869)", birthPlace: "Missouri, USA", nationality: "American" }],
+  5: [{ name: "Boatswain", description: "Lord Byron's Newfoundland, immortalized in marble tomb (1803-1808)", birthPlace: "England", nationality: "British" }],
+  9: [{ name: "Jofi", description: "Sigmund Freud's Chow Chow used in psychoanalysis sessions (1928-1937)", birthPlace: "Austria", nationality: "Austrian" }],
+  10: [{ name: "Stubby", description: "Most decorated WWI war dog, Sergeant rank, captured German spy (1916-1926)", birthPlace: "USA", nationality: "American" }],
+  12: [{ name: "Terry (Toto)", description: "Cairn Terrier who starred as Toto in 'The Wizard of Oz' (1933-1945)", birthPlace: "USA", nationality: "American" }],
+  13: [{ name: "Champ", description: "Joe Biden's German Shepherd, White House First Dog (2008-2021)", birthPlace: "USA", nationality: "American" }],
+  14: [{ name: "Balto", description: "Siberian Husky lead sled dog in 1925 serum run to Nome, Alaska (1919-1933)", birthPlace: "Alaska, USA", nationality: "American" }],
+  15: [{ name: "Unsinkable Sam", description: "Black & White cat who survived sinking of Bismarck, HMS Cossack, and HMS Ark Royal (1940-1955)", birthPlace: "Naval Ships", nationality: "British" }],
+  16: [{ name: "Togo", description: "Siberian Husky lead sled dog for longest/most dangerous stretch to Nome (1913-1929)", birthPlace: "Alaska, USA", nationality: "American" }],
+  17: [{ name: "Greyfriars Bobby", description: "Skye Terrier who guarded owner's grave for 14 years in Scotland (1855-1872)", birthPlace: "Scotland", nationality: "Scottish" }],
+  18: [{ name: "Pal (Lassie)", description: "Rough Collie, original Lassie actor with most spectacular canine career (1940-1958)", birthPlace: "USA", nationality: "American" }],
+  20: [{ name: "Mayor Stubbs", description: "Tabby cat who was honorary mayor of Talkeetna, Alaska for 20 years (1997-2017)", birthPlace: "Alaska, USA", nationality: "American" }],
+  21: [{ name: "Room 8", description: "School tabby cat who returned every year, received 100+ letters daily (1947-1968)", birthPlace: "California, USA", nationality: "American" }],
+  30: [{ name: "Peritas", description: "Alexander the Great's Molossian who saved him from charging elephant (356 BC-326 BC)", birthPlace: "Macedonia", nationality: "Macedonian" }],
+  38: [{ name: "Creme Puff", description: "Oldest cat ever recorded, lived in Texas (1967-2005)", birthPlace: "Texas, USA", nationality: "American" }]
 };
 
-// Famous people data
+// Real famous people data from historical records
 const FAMOUS_PEOPLE = {
-  16: [{ name: "Greta Thunberg", description: "Climate activist" }],
-  25: [{ name: "Taylor Swift", description: "Singer-songwriter" }],
-  30: [{ name: "Mark Zuckerberg", description: "Facebook founder" }],
-  40: [{ name: "Elon Musk", description: "Tesla/SpaceX CEO" }],
-  50: [{ name: "Jennifer Lopez", description: "Singer and actress" }],
-  60: [{ name: "Barack Obama", description: "Former US President" }],
-  70: [{ name: "Bill Gates", description: "Microsoft founder" }],
-  80: [{ name: "Warren Buffett", description: "Investor and philanthropist" }]
+  32: [{ name: "Alexander the Great", description: "Military conqueror from Macedonia (356 BC - 323 BC)", birthPlace: "Pella, Macedonia", nationality: "Macedonian" }],
+  33: [{ name: "Jesus Christ", description: "Religious leader, founder of Christianity (~4 BC - ~30 AD)", birthPlace: "Bethlehem", nationality: "Jewish" }],
+  35: [{ name: "Wolfgang Amadeus Mozart", description: "Classical composer from Austria (1756-1791)", birthPlace: "Salzburg, Austria", nationality: "Austrian" }],
+  37: [{ name: "Vincent van Gogh", description: "Post-impressionist painter from Netherlands (1853-1890)", birthPlace: "Groot-Zundert, Netherlands", nationality: "Dutch" }],
+  51: [{ name: "Napoleon Bonaparte", description: "Military leader, emperor from France (1769-1821)", birthPlace: "Corsica, France", nationality: "French" }],
+  52: [{ name: "William Shakespeare", description: "Playwright, poet from England (1564-1616)", birthPlace: "Stratford-upon-Avon, England", nationality: "English" }],
+  56: [
+    { name: "Abraham Lincoln", description: "16th U.S. President (1809-1865)", birthPlace: "Kentucky, USA", nationality: "American" },
+    { name: "Ludwig van Beethoven", description: "Classical composer from Germany (1770-1827)", birthPlace: "Bonn, Germany", nationality: "German" },
+    { name: "Adolf Hitler", description: "Dictator from Austria/Germany (1889-1945)", birthPlace: "Braunau am Inn, Austria", nationality: "Austrian/German" }
+  ],
+  62: [
+    { name: "Muhammad", description: "Prophet, founder of Islam (~570-632 AD)", birthPlace: "Mecca, Saudi Arabia", nationality: "Arabian" },
+    { name: "Aristotle", description: "Philosopher from Greece (384 BC - 322 BC)", birthPlace: "Stagira, Greece", nationality: "Greek" }
+  ],
+  64: [{ name: "Karl Marx", description: "Political philosopher, economist from Germany (1818-1883)", birthPlace: "Trier, Germany", nationality: "German" }],
+  65: [{ name: "Johann Sebastian Bach", description: "Baroque composer from Germany (1685-1750)", birthPlace: "Eisenach, Germany", nationality: "German" }],
+  66: [{ name: "Marie Curie", description: "Physicist, chemist, Nobel Prizes (1867-1934)", birthPlace: "Warsaw, Poland", nationality: "Polish/French" }],
+  67: [
+    { name: "George Washington", description: "1st U.S. President (1732-1799)", birthPlace: "Virginia, USA", nationality: "American" },
+    { name: "Leonardo da Vinci", description: "Artist, inventor, polymath from Italy (1452-1519)", birthPlace: "Vinci, Italy", nationality: "Italian" }
+  ],
+  71: [{ name: "Socrates", description: "Classical philosopher from Greece (~470 BC - 399 BC)", birthPlace: "Athens, Greece", nationality: "Greek" }],
+  72: [{ name: "Confucius", description: "Philosopher, teacher from China (~551 BC - ~479 BC)", birthPlace: "Lu State, China", nationality: "Chinese" }],
+  73: [{ name: "Charles Darwin", description: "Theory of evolution from Britain (1809-1882)", birthPlace: "Shrewsbury, England", nationality: "British" }],
+  76: [{ name: "Albert Einstein", description: "Theory of relativity, Nobel Prize Physics 1921 (1879-1955)", birthPlace: "Ulm, Germany", nationality: "German/American" }],
+  79: [{ name: "Immanuel Kant", description: "Philosopher from Germany (1724-1804)", birthPlace: "Königsberg, Prussia", nationality: "German" }],
+  80: [{ name: "Plato", description: "Philosopher, founded Academy in Greece (~428 BC - ~348 BC)", birthPlace: "Athens, Greece", nationality: "Greek" }],
+  83: [{ name: "Thomas Jefferson", description: "3rd U.S. President (1743-1826)", birthPlace: "Virginia, USA", nationality: "American" }],
+  84: [
+    { name: "Isaac Newton", description: "Laws of motion, gravity from England (1643-1727)", birthPlace: "Woolsthorpe, England", nationality: "English" },
+    { name: "Thomas Edison", description: "Inventor (light bulb, phonograph) from USA (1847-1931)", birthPlace: "Ohio, USA", nationality: "American" }
+  ],
+  88: [{ name: "Michelangelo", description: "Renaissance artist, sculptor from Italy (1475-1564)", birthPlace: "Caprese, Italy", nationality: "Italian" }]
 };
 
 // Product suggestions by age and type
@@ -515,6 +549,11 @@ export default function PetDetails() {
                     <div key={index} className="border-l-4 border-orange-500 pl-3">
                       <div className="font-medium">{pet.name}</div>
                       <div className="text-sm text-muted-foreground">{pet.description}</div>
+                      {pet.birthPlace && (
+                        <div className="text-xs text-muted-foreground mt-1">
+                          📍 {pet.birthPlace} • {pet.nationality}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </CardContent>
@@ -532,6 +571,11 @@ export default function PetDetails() {
                     <div key={index} className="border-l-4 border-green-500 pl-3">
                       <div className="font-medium">{person.name}</div>
                       <div className="text-sm text-muted-foreground">{person.description}</div>
+                      {person.birthPlace && (
+                        <div className="text-xs text-muted-foreground mt-1">
+                          📍 {person.birthPlace} • {person.nationality}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </CardContent>
