@@ -44,11 +44,6 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
-        cosmic: {
-          purple: "var(--cosmic-purple)",
-          blue: "var(--cosmic-blue)",
-          gold: "var(--cosmic-gold)",
-        }
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
